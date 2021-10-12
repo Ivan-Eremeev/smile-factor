@@ -1,0 +1,85 @@
+.welcome {
+  padding: 46px 0 45px;
+  background: $gradient;
+  color: #fff;
+  &__title {
+    font-size: 39px;
+    text-align: center;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    width: 62%;
+    padding-top: 68px;
+  }
+  &__list {
+    font-size: 28px;
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 36px;
+      &:before {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-image: url(../img/check.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 3px;
+      }
+    }
+  }
+  .btn {
+    margin-left: 50px;
+    margin-top: 40px;
+  }
+  &__img {
+    width: 40%;
+  }
+  @media (max-width: $break_sm) {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .btn {
+      margin-left: 0;
+    }
+    &__img {
+      width: 100%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 24px;
+    }
+    &__content {
+      padding-top: 30px;
+    }
+    &__list {
+      font-size: 20px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+    &__img {
+      width: 80%;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+  }
+}
