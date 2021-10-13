@@ -1,0 +1,46 @@
+.description2 {
+  padding: 20px 0 20px;
+  .title {
+    margin-bottom: 65px;
+  }
+  &__col1 {
+    @include col(4);
+    @include col-md(6);
+    @include col-sm(12);
+  }
+  &__col2 {
+    @include col(8);
+    @include col-md(6);
+    @include col-sm(12);
+  }
+  &__text {
+    img {
+      width: 80%;
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    .title {
+      margin-bottom: 30px;
+    }
+    &__col1 {
+      order: 2;
+    }
+    &__col2 {
+      order: 1;
+      margin-bottom: 30px;
+    }
+    &__text {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    
+  }
+}
