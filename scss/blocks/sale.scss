@@ -22,4 +22,40 @@
       right: -70px;
     }
   }
+  @media (max-width: $break_sm) {
+    padding: 0 0 20px;
+    &__slider {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+    .slider-arrow {
+      &--prev {
+        left: -35px;
+      }
+      &--next {
+        right: -35px;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    &__slider {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .slider-arrow {
+      top:auto;
+      bottom: 10px;
+      transform: translate(0,0);
+      &--prev {
+        left: 5px;
+      }
+      &--next {
+        right: 5px;
+      }
+    }
+  }
 }

@@ -6,8 +6,8 @@
 
 // // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1080px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$max-width: 1180px; // Максимальная ширина контейнера
+$gutter: 40px; // Расстояние между колонками
 $offset: 15px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
@@ -50,6 +50,7 @@ $black: #000;
 $red: #ED2B58;
 $green: #40E0BB;
 $gradient: linear-gradient(to right, #8871CB, #46CDAC);
+$shadow: 5px 5px 10px rgba(0,0,0,.2);
 
 // Подключение файлов
 @import 'blocks/settings';
@@ -57,6 +58,8 @@ $gradient: linear-gradient(to right, #8871CB, #46CDAC);
 @import 'blocks/welcome';
 @import 'blocks/advantages';
 @import 'blocks/sale';
+@import 'blocks/description';
+@import 'blocks/item';
 // @import 'hamburgers/hamburgers';
 // @import 'blocks/menu';
 // @import 'blocks/accordion';

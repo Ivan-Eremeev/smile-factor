@@ -35,7 +35,7 @@ block content
 						.welcome__img 
 							img(src="img/implantat_new.png", alt="")
 
-			section.advantages
+			.advantages
 				.wrapper
 					.row 
 						.advantages__col
@@ -56,11 +56,64 @@ block content
 
 			section.sale
 				.wrapper 
-					.sale__title АКЦИИ
+					h2.sale__title АКЦИИ
 					.sale__slider
 						#sliderSale
 							img(src="img/nesjemnoe-protezirovanie-aktsiya-1.jpg", alt="")
 							img(src="img/nobel-aktsiya-1.jpg", alt="")
+
+			section.description
+				.wrapper 
+					h2.title Имплантация зубов под ключ
+					.description__row
+						.description__img
+							img(src="img/Elita-omsk-implantatsiya-uslugi.jpg", alt="")
+						.typotext 
+							p Показания для имплантации зубов:
+							ul 
+								li отсутствие одного зуба;
+								li отсутствие нескольких зубов;
+								li полная адентия (отсутствие всех зубов);
+								li зуб полностью разрушен, необходимо удаление;
+								li непереносимость съемных зубных протезов.
+							p Качественно проведенная имплантация зубов решит не только физические, но и эстетические проблемы, возвращая красивую улыбку.
+					.row 
+						.description__col
+							.item 
+								.item__body
+									.item__img.img-responsive
+										img(src="img/nobel_logo_header.png", alt="")
+									ul.item__list 
+										li Консультация специалиста
+										li Анестезия
+										li Имплантат «Nobel», США
+										li Операция по установке импланта
+									.item__price 36 500 руб.
+									.btn.btn--red Записаться
+						.description__col
+							.item
+								.item__body 
+									.item__img.img-responsive
+										img(src="img/Logo_osstem.png", alt="")
+									ul.item__list 
+										li Консультация специалиста
+										li Анестезия
+										li Имплантат «Osstem», Корея
+										li Операция по установке импланта
+									.item__price 25 900 руб.
+									.btn.btn--red Записаться
+						.description__col
+							.item 
+								.item__body
+									.item__img.img-responsive
+										img(src="img/logo-neo-biotech.png", alt="")
+									ul.item__list 
+										li Консультация специалиста
+										li Анестезия
+										li Имплантат «Neobiotech», Корея
+										li Операция по установке импланта
+									.item__price 23 800 руб.
+									.btn.btn--red Записаться
 			
 		include blocks/footer.pug
 

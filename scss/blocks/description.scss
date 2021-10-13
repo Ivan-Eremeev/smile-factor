@@ -1,0 +1,51 @@
+.description {
+  padding: 30px 0 30px;
+  .title {
+    margin-bottom: 60px;
+  }
+  &__row {
+    display: flex;
+    margin-bottom: 80px;
+  }
+  &__img {
+    max-width: 390px;
+  }
+  .typotext {
+    padding-left: 20px;
+  }
+  &__col {
+    @include col(4);
+    @include col-sm(6);
+    @include col-xs(12);
+    margin-bottom: 20px;
+  }
+  @media (max-width: $break_md) {
+    .row {
+      margin-left: -20px;
+    }
+    &__col {
+      padding-left: 20px;
+    }
+    &__img {
+      width: 90%;
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 20px 0;
+    .title {
+      margin-bottom: 30px;
+    }
+    &__row {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    &__img {
+      max-width: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .typotext {
+      padding-left: 0;
+    }
+  }
+}
