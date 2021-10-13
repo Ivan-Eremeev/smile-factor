@@ -103,4 +103,39 @@ b, strong {
     font-size: 20px;
   }
 }
+.slider-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #E1F0EB;
+  border-radius: 100%;
+  cursor: pointer;
+  user-select: none;
+  transform: translate(0,-50%);
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #999999;
+    transition: 0.2s;
+  }
+  &--prev {
+    left: 10px;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &--next {
+    right: 10px;
+  }
+  &:hover {
+    svg {
+      fill: $green;
+    }
+  }
+}
 /* /settings */
