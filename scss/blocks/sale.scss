@@ -1,5 +1,5 @@
 .sale {
-  padding: 0 0 30px;
+  padding: 24px 0 16px;
   .wrapper {
     max-width: 1160px;
   }
@@ -23,7 +23,7 @@
     }
   }
   @media (max-width: $break_sm) {
-    padding: 0 0 20px;
+    padding: 15px 0 10px;
     &__slider {
       margin-left: 35px;
       margin-right: 35px;

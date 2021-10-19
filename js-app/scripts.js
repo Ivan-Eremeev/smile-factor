@@ -688,6 +688,11 @@ $(document).ready(function () {
 	}
 	dropBlock($('.js-drop-btn'));
 
+	// JQueryMathHeight
+	if ($('.team__name').length) {
+		$('.team__name').matchHeight();
+	}
+
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {
 	// 	if ($('.jquery-slider').length) {

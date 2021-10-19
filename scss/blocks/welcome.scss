@@ -1,5 +1,5 @@
 .welcome {
-  padding: 46px 0 45px;
+  padding: 46px 0 37px;
   background: $gradient;
   color: #fff;
   .wrapper {
@@ -15,14 +15,14 @@
   }
   &__content {
     width: 62%;
-    padding-top: 68px;
+    padding-top: 56px;
   }
   &__list {
     font-size: 28px;
     li {
       position: relative;
       padding-left: 30px;
-      margin-bottom: 43px;
+      margin-bottom: 34px;
       &:before {
         content: '';
         display: block;
