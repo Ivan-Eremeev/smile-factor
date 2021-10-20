@@ -1,2 +1,49 @@
-footer.footer 
-	.wrapper 
+footer.header#header
+	.wrapper
+		.header__row
+			.header__col
+				a(href="#").logo
+					img(src="img/logo_1.png", alt="")
+			.header__col
+				.location.location--footer
+					.location__trigger
+						a(href="https://factorsmile.ru/kontakty/klinika-na-leninskom-pr")
+							span
+								b м. Ленинский проспект
+							span пр. Народного Ополчения д.10, Лит. А
+						.location__click.js-drop-btn(data-drop="locationFooter")
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><defs><clipPath><path fill-opacity=".514" d="m-7 1024.36h34v34h-34z"/></clipPath><clipPath><path fill-opacity=".472" d="m-6 1028.36h32v32h-32z"/></clipPath></defs><path d="m345.44 248.29l-194.29 194.28c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744l171.91-171.91-171.91-171.9c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.29 194.28c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373" transform="matrix(.03541-.00013.00013.03541 2.98 3.02)"/></svg>
+					.location__drop#locationFooter
+						a(href="https://factorsmile.ru/kontakty/klinika-na-ligovskom-pr").location__item 
+							span
+								b м. Лиговский проспект
+							span ул. Разъезжая, дом 35
+						a(href="https://factorsmile.ru/kontakty/klinika-na-prospekte-prosveshcheniya").location__item 
+							p
+								b м. Проспект просвещения
+							p Сиреневый бульвар, дом 18, корп.1
+						a(href="https://factorsmile.ru/kontakty/klinika-na-ul-varshavskoj").location__item 
+							span
+								b м. Электросила
+							span ул. Варшавская д.23, к.1
+						a(href="https://factorsmile.ru/kontakty/klinika-na-komendantskom-pr").location__item 
+							span
+								b м. Комендантский проспект
+							span пр. Авиаконструкторов д.2 корп.1
+						a(href="https://factorsmile.ru/kontakty/klinika-na-kolomyazhskom").location__item 
+							span
+								b м.Пионерская
+							span пр. Коломяжский д.20
+						a(href="https://factorsmile.ru/kontakty/klinika-na-budapeshtskoj").location__item 
+							span
+								b м. Дунайская
+							span ул. Будапештская 83/39
+			.header__col
+				.worktime
+					p 
+						b Мы работаем:
+					p Ежедневно c 9.00 до 21.00	 
+			.header__col
+				.action
+					a(href="tel:+78123201020").action__link +7(812) 320-10-20
+					.btn.btn--red Записаться
