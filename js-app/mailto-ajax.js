@@ -4,7 +4,7 @@ function formSubmit() {
     e.preventDefault();
     // Заводим переменные
     // Ищем родительскую фору для того чтобы манипулировать элементами находящимися только внутри неё
-    var form = $(this).closest('.form');
+    var form = $(this).closest('form');
     // Запоминаем путь к php обработчику формы
     var url = form.attr('action');
     // Собираем все данные с полей формы для отправки
@@ -19,6 +19,8 @@ function formSubmit() {
     field.each(function() {
       // Если поля пустые
       if ($(this).val() == "") {
+        // Убираем класс valid
+        $(this).removeClass('valid');
         // Добавляем класс invalid
         $(this).addClass('invalid');
         // Увеличиваем счеткик пустых полей
@@ -54,7 +56,11 @@ function formSubmit() {
           console.log(response);
           // Дальше несколько вариантов
           // Открываем окно с сообщением
-          // modalShow($('#success'));
+          modalShow($('#success'));
+          setTimeout(() => {
+            modalHide($('#success'));
+            modalHide($('#modal'));
+          }, 2000);
           // Открываем какую то страницу. как правило так называемую "страницу спасибо"
           // document.location.href = "success.html";
         },
@@ -62,7 +68,10 @@ function formSubmit() {
         error: function (response) {
           console.log(response);
           // Тоже что нибудь делаем
-          // modalShow($('#error'));
+          modalShow($('#error'));
+          setTimeout(() => {
+            modalHide($('#error'));
+          }, 2000);
           // Выводим в заготовленный блок какое то сообщение
           // $('#rezult').text('Проверте корректность заполнения полей формы.');
         }
@@ -78,7 +87,7 @@ function formSubmit() {
   // Если есть чекбокс с политикой можно отключать кнопку при снятом чекбоксе добавляя к кнопке атрибут disabled 
   $('.form__privacy input').on('change', function(event) {
     event.preventDefault();
-    var btn = $(this).closest('.form').find('.btn');
+    var btn = $(this).closest('form').find('.btn');
     if ($(this).prop('checked')) {
       btn.removeAttr('disabled');
       // console.log('checked');

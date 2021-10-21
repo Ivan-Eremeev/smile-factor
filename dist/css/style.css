@@ -285,6 +285,11 @@ b, strong {
 .btn--red:hover {
   background-color: #c82333;
 }
+.btn:disabled {
+  background-color: #ccc;
+  border-color: #bbb;
+  cursor: default;
+}
 @media (max-width: 500px) {
   .btn {
     font-size: 20px;
@@ -407,6 +412,12 @@ b, strong {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+.input input.invalid {
+  border-color: red;
+}
+.input input.valid {
+  border-color: #40E0BB;
+}
 @media (max-width: 500px) {
   .input input {
     font-size: 18px;
@@ -432,6 +443,12 @@ b, strong {
 }
 .select select:focus-visible {
   outline: none;
+}
+.select select.invalid {
+  border-color: red;
+}
+.select select.valid {
+  border-color: #40E0BB;
 }
 @media (max-width: 500px) {
   .select select {

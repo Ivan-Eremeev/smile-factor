@@ -110,6 +110,11 @@ b, strong {
       background-color: #c82333;
     }
   }
+  &:disabled {
+    background-color: #ccc;
+    border-color: #bbb;
+    cursor: default;
+  }
   @media (max-width: $break_xs) {
     font-size: 20px;
   }
@@ -211,6 +216,12 @@ b, strong {
       border-color: #80bdff;
       box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
     }
+    &.invalid {
+      border-color: red;
+    }
+    &.valid {
+      border-color: $green;
+    }
   }
   @media (max-width: $break_xs) {
     input {
@@ -234,6 +245,12 @@ b, strong {
     }
     &:focus-visible {
       outline: none;
+    }
+    &.invalid {
+      border-color: red;
+    }
+    &.valid {
+      border-color: $green;
     }
   }
   @media (max-width: $break_xs) {

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Главная</title>
+		<title>Имплантация зубов</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -514,7 +514,7 @@
 								<div class="review__item"> 
 									<div class="review__inner">
 										<div class="review__title">Федоров Михаил Николаевич</div>
-										<div class="review__content"> <a href="img/review-1.jpeg" data-fancybox> <img data-lazy="img/review-1.jpeg" alt=""></a>
+										<div class="review__content"> <a href="img/review-1.jpeg" data-fancybox> <img src="img/review-1.jpeg" alt=""></a>
 											<p>Выношу благодарность врачу Идрисову Ниматуле Шамильевичу за качественную, грамотную и безболезненную работу по установке имплантов.</p>
 											<p>Сначала я считал, что получилось удачно, но теперь считаю, что это профессионализм!</p>
 											<p>Также я хочу отметить работу административного и медицинского персонала. Всегда вежливо и оперативно решали вопросы.</p>
@@ -525,7 +525,7 @@
 								<div class="review__item"> 
 									<div class="review__inner">
 										<div class="review__title">Русу Николай Сергеевич</div>
-										<div class="review__content"> <a href="img/review-2.jpeg" data-fancybox> <img data-lazy="img/review-2.jpeg" alt=""></a>
+										<div class="review__content"> <a href="img/review-2.jpeg" data-fancybox> <img src="img/review-2.jpeg" alt=""></a>
 											<p>Я проходил хирургическое лечение и установил 12 имплантов у доктора Захарова А.Н. В дальнейшем проходил лечение у ортопеда Журавкова С.А. Выражаю благодарность врачам, ассистентам за проделанную работу. </p>
 											<p>Буду рекомендовать моим знакомым и друзьям вашу клинику.</p>
 											<p>Желаю вам хороших пациентов.</p>
@@ -536,7 +536,7 @@
 								<div class="review__item"> 
 									<div class="review__inner">
 										<div class="review__title">Кремаренко Х.П.</div>
-										<div class="review__content"> <a href="img/review-3.jpeg" data-fancybox> <img data-lazy="img/review-3.jpeg" alt=""></a>
+										<div class="review__content"> <a href="img/review-3.jpeg" data-fancybox> <img src="img/review-3.jpeg" alt=""></a>
 											<p>Хочу выразить огромную благодарность доктору хирургу Артему Арамовичу, менеджеру Оксане за теплое, внимательное, а главное высокий профессионализм в своей работе. Я ставлю вторые импланты в вашей клинике и очень доверяю вашим специалистам.</p>
 											<p>Огромное спасибо!</p>
 										</div>
@@ -545,7 +545,7 @@
 								<div class="review__item"> 
 									<div class="review__inner">
 										<div class="review__title">Руденко Светлана Вальеревна</div>
-										<div class="review__content"> <a href="img/review-4.jpeg" data-fancybox> <img data-lazy="img/review-4.jpeg" alt=""></a>
+										<div class="review__content"> <a href="img/review-4.jpeg" data-fancybox> <img src="img/review-4.jpeg" alt=""></a>
 											<p>Огромная благодарность врачам клиники "Фактор Улыбки" Олегу Владимировичу и Журавкову Сергею Александровичу за мои новые зубки! Все сделано профессионально, быстро, и с заботой и позитивом!</p>
 										</div>
 										<div class="review__date">Опубликовано в августе 2021г.</div>
@@ -554,7 +554,7 @@
 								<div class="review__item"> 
 									<div class="review__inner">
 										<div class="review__title">Николаева Ольга Николаевна</div>
-										<div class="review__content"> <a href="img/review-5.jpeg" data-fancybox> <img data-lazy="img/review-5.jpeg" alt=""></a>
+										<div class="review__content"> <a href="img/review-5.jpeg" data-fancybox> <img src="img/review-5.jpeg" alt=""></a>
 											<p>Я, Николаева Ольга Николаевна проходила имплантацию у доктора Куща И.В. и протезирование у врача Цуркан Владислава Геннадьевича протезиста. Очень довольна проделанной работой этих врачей. Хожу в эту клинику и благодарна всему персоналу за проделанную работу. Всем советую.</p>
 										</div>
 										<div class="review__date">Опубликовано в мае 2021г.</div>
@@ -575,10 +575,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- modal-->
 				<div class="modal" id="modal">
 					<div class="modal_body">
-						<form class="modal_content" action="#">
+						<form class="modal_content" action="send.php" method="post">
 							<div class="modal__title">Записаться на прием</div>
 							<div class="modal__row">
 								<p>Выберите удобное для Вас дату и время</p>
@@ -588,7 +587,7 @@
 									<input type="text" name="date" required autocomplete="off" id="datepicker">
 								</div>
 								<div class="select"> 
-									<select name="time"> 
+									<select name="time" required> 
 										<option value="9.00">9.00</option>
 										<option value="10.00">10.00</option>
 										<option value="11.00">11.00</option>
@@ -621,7 +620,7 @@
 								<button class="btn btn--red" type="submit">Записаться</button>
 							</div>
 							<div class="modal__row"> 
-								<div class="modal__check">
+								<div class="modal__check form__privacy">
 									<input id="checkbox" type="checkbox" checked required>
 									<label for="checkbox">Я соглашаюсь на обработку персональных данных</label>
 								</div>
@@ -630,7 +629,22 @@
 						</form>
 					</div>
 				</div>
-				<!-- /modal-->
+				<div class="modal" id="error">
+					<div class="modal_body">
+						<form class="modal_content" action="send.php" method="post">
+							<div class="modal__title">Что то не так. Попробуйте еще раз</div>
+							<div class="modal_close"></div>
+						</form>
+					</div>
+				</div>
+				<div class="modal" id="success">
+					<div class="modal_body">
+						<form class="modal_content" action="send.php" method="post">
+							<div class="modal__title">Спасибо! Мы позвоним Вам в ближайшее время</div>
+							<div class="modal_close"></div>
+						</form>
+					</div>
+				</div>
 			</div>
 			<footer class="header">
 				<div class="wrapper">

@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Главная
+	title Имплантация зубов
 
 block style-libs
 	link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
@@ -515,7 +515,7 @@ block content
 									.review__title Федоров Михаил Николаевич
 									.review__content 
 										a(href="img/review-1.jpeg" data-fancybox) 
-											img(data-lazy="img/review-1.jpeg", alt="")
+											img(src="img/review-1.jpeg", alt="")
 										p Выношу благодарность врачу Идрисову Ниматуле Шамильевичу за качественную, грамотную и безболезненную работу по установке имплантов.
 										p Сначала я считал, что получилось удачно, но теперь считаю, что это профессионализм!
 										p Также я хочу отметить работу административного и медицинского персонала. Всегда вежливо и оперативно решали вопросы.
@@ -525,7 +525,7 @@ block content
 									.review__title Русу Николай Сергеевич
 									.review__content 
 										a(href="img/review-2.jpeg" data-fancybox) 
-											img(data-lazy="img/review-2.jpeg", alt="")
+											img(src="img/review-2.jpeg", alt="")
 										p Я проходил хирургическое лечение и установил 12 имплантов у доктора Захарова А.Н. В дальнейшем проходил лечение у ортопеда Журавкова С.А. Выражаю благодарность врачам, ассистентам за проделанную работу. 
 										p Буду рекомендовать моим знакомым и друзьям вашу клинику.
 										p Желаю вам хороших пациентов.
@@ -535,7 +535,7 @@ block content
 									.review__title Кремаренко Х.П.
 									.review__content 
 										a(href="img/review-3.jpeg" data-fancybox) 
-											img(data-lazy="img/review-3.jpeg", alt="")
+											img(src="img/review-3.jpeg", alt="")
 										p Хочу выразить огромную благодарность доктору хирургу Артему Арамовичу, менеджеру Оксане за теплое, внимательное, а главное высокий профессионализм в своей работе. Я ставлю вторые импланты в вашей клинике и очень доверяю вашим специалистам.
 										p Огромное спасибо!
 							.review__item 
@@ -543,7 +543,7 @@ block content
 									.review__title Руденко Светлана Вальеревна
 									.review__content 
 										a(href="img/review-4.jpeg" data-fancybox) 
-											img(data-lazy="img/review-4.jpeg", alt="")
+											img(src="img/review-4.jpeg", alt="")
 										p Огромная благодарность врачам клиники "Фактор Улыбки" Олегу Владимировичу и Журавкову Сергею Александровичу за мои новые зубки! Все сделано профессионально, быстро, и с заботой и позитивом!
 									.review__date Опубликовано в августе 2021г.
 							.review__item 
@@ -551,7 +551,7 @@ block content
 									.review__title Николаева Ольга Николаевна
 									.review__content 
 										a(href="img/review-5.jpeg" data-fancybox) 
-											img(data-lazy="img/review-5.jpeg", alt="")
+											img(src="img/review-5.jpeg", alt="")
 										p Я, Николаева Ольга Николаевна проходила имплантацию у доктора Куща И.В. и протезирование у врача Цуркан Владислава Геннадьевича протезиста. Очень довольна проделанной работой этих врачей. Хожу в эту клинику и благодарна всему персоналу за проделанную работу. Всем советую.
 									.review__date Опубликовано в мае 2021г.
 
@@ -563,10 +563,9 @@ block content
 						.map__title Наши клиники
 						ul.map__list
 
-			// modal
 			.modal#modal
 				.modal_body
-					form(action="#").modal_content
+					form(action="send.php" method="post").modal_content
 						.modal__title Записаться на прием
 						.modal__row
 							p Выберите удобное для Вас дату и время
@@ -574,7 +573,7 @@ block content
 							.input
 								input(type="text" name="date" required autocomplete="off")#datepicker
 							.select 
-								select(name="time") 
+								select(name="time" required) 
 									option(value="9.00") 9.00
 									option(value="10.00") 10.00
 									option(value="11.00") 11.00
@@ -598,11 +597,22 @@ block content
 						.modal__row 
 							button(type="submit").btn.btn--red Записаться
 						.modal__row 
-							.modal__check
+							.modal__check.form__privacy
 								input#checkbox(type="checkbox" checked required)
 								label(for="checkbox") Я соглашаюсь на обработку персональных данных
 						.modal_close
-			// /modal
+
+			.modal#error
+				.modal_body
+					form(action="send.php" method="post").modal_content
+						.modal__title Что то не так. Попробуйте еще раз
+						.modal_close
+
+			.modal#success
+				.modal_body
+					form(action="send.php" method="post").modal_content
+						.modal__title Спасибо! Мы позвоним Вам в ближайшее время
+						.modal_close
 
 		include blocks/footer.pug
 
