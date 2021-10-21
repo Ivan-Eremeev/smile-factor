@@ -6,15 +6,17 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 10;
 	overflow: auto;
 	&_body {
-		max-width: 100%;
+		max-width: 520px;
+		width: 100%;
 		max-height: 100%;
 		padding: 10px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%,-50%) scale(0, 0);
+		transform: translate(-50%,-60%);
 		opacity: 0;
 		transition: .5s;
 	}
@@ -22,13 +24,14 @@
 		padding: 20px;
 		position: relative;
 		background-color: #fff;
+		border-radius: 20px;
 	}
 	&_close {
-		width: 20px;
-		height: 20px;
+		width: 16px;
+		height: 16px;
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: 10px;
+		right: 10px;
 		cursor: pointer;
 		user-select: none;
 		&:after,&:before {
@@ -42,16 +45,61 @@
 			left: 50%;
 		}
 		&:after {
-			transform: translate(-50%,-50%) rotate(45deg);
+			transform: translate(-50%,-50%) rotate(55deg);
 		}
 		&:before {
-			transform: translate(-50%,-50%) rotate(-45deg);
+			transform: translate(-50%,-50%) rotate(-55deg);
 		}
 	}
 	&.open {
 		.modal_body {
-			transform: translate(-50%,-50%) scale(1, 1);
+			transform: translate(-50%,-50%);
 			opacity: 1;
 		}
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: bold;
+		color: #696969;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__row {
+		margin-bottom: 10px;
+		&--half {
+			display: flex;
+			margin-left: -10px;
+			> * {
+				width:	calc(50% - 10px);
+				margin-left: 10px;
+			}
+		}
+		p {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+	&__check {
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		input {
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		label {
+			cursor: pointer;
+			user-select: none;
+		}
+	}
+	.btn {
+		width: 100%;
+	}
+	#datepicker {
+		background-image: url(../img/calendar_2.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		font-size: 18px;
 	}
 }

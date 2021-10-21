@@ -8,6 +8,7 @@
 		<meta name="description" content="">
 		<link rel="stylesheet" href="css/libs/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="css/libs/slick.css">
+		<link rel="stylesheet" href="css/libs/air-datepicker.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -34,7 +35,7 @@
 						</div>
 						<div class="header__col">
 							<div class="action"><a class="action__link" href="tel:+78123201020">+7(812) 320-10-20</a>
-								<div class="btn btn--red">Записаться</div>
+								<div class="btn btn--red modal-trigger" data-modal="#modal">Записаться</div>
 							</div>
 						</div>
 					</div>
@@ -51,7 +52,7 @@
 									<li>Имплантация по технологии All-on-4</li>
 									<li>Имплантация по технологии All-on-6</li>
 								</ul>
-								<div class="btn btn--red">Записаться на консультацию</div>
+								<div class="btn btn--red modal-trigger" data-modal="#modal">Записаться на консультацию</div>
 							</div>
 							<div class="welcome__img"> <img src="img/implantat_new.png" alt=""></div>
 						</div>
@@ -108,7 +109,7 @@
 						</div>
 						<div class="row"> 
 							<div class="description__col">
-								<div class="item"> 
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body">
 										<div class="item__img"><img src="img/nobel_logo_header.png" alt=""></div>
 										<ul class="item__list"> 
@@ -123,7 +124,7 @@
 								</div>
 							</div>
 							<div class="description__col">
-								<div class="item">
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body"> 
 										<div class="item__img"><img src="img/Logo_osstem.png" alt=""></div>
 										<ul class="item__list"> 
@@ -138,7 +139,7 @@
 								</div>
 							</div>
 							<div class="description__col">
-								<div class="item"> 
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body">
 										<div class="item__img"><img src="img/logo-neo-biotech.png" alt=""></div>
 										<ul class="item__list"> 
@@ -160,7 +161,7 @@
 						<h2 class="title">Имплантация зубов All-on-4 под ключ</h2>
 						<div class="row"> 
 							<div class="description2__col1"> 
-								<div class="item"> 
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body">
 										<div class="item__img"><img src="img/nobel_logo_header.png" alt=""></div>
 										<ul class="item__list"> 
@@ -197,7 +198,7 @@
 						</div>
 						<div class="row"> 
 							<div class="description__col">
-								<div class="item"> 
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body">
 										<div class="item__img"><img src="img/nobel_logo_header.png" alt=""></div>
 										<ul class="item__list"> 
@@ -215,7 +216,7 @@
 								</div>
 							</div>
 							<div class="description__col">
-								<div class="item">
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body"> 
 										<div class="item__img"><img src="img/Logo_osstem.png" alt=""></div>
 										<ul class="item__list"> 
@@ -233,7 +234,7 @@
 								</div>
 							</div>
 							<div class="description__col">
-								<div class="item"> 
+								<div class="item modal-trigger" data-modal="#modal">
 									<div class="item__body">
 										<div class="item__img"><img src="img/logo-neo-biotech.png" alt=""></div>
 										<ul class="item__list"> 
@@ -298,7 +299,7 @@
 							<li><span>Формирователь десны «Nobel»	</span><span>8 300 ₽</span></li>
 						</ul>
 						<div class="price__btn"> 
-							<div class="btn btn--red">Записаться на прием</div>
+							<div class="btn btn--red modal-trigger" data-modal="#modal">Записаться на прием</div>
 						</div>
 					</div>
 				</section>
@@ -574,6 +575,62 @@
 						</div>
 					</div>
 				</div>
+				<!-- modal-->
+				<div class="modal" id="modal">
+					<div class="modal_body">
+						<form class="modal_content" action="#">
+							<div class="modal__title">Записаться на прием</div>
+							<div class="modal__row">
+								<p>Выберите удобное для Вас дату и время</p>
+							</div>
+							<div class="modal__row modal__row--half"> 
+								<div class="input">
+									<input type="text" name="date" required autocomplete="off" id="datepicker">
+								</div>
+								<div class="select"> 
+									<select name="time"> 
+										<option value="9.00">9.00</option>
+										<option value="10.00">10.00</option>
+										<option value="11.00">11.00</option>
+										<option value="12.00">12.00</option>
+										<option value="13.00">13.00</option>
+										<option value="14.00">14.00</option>
+										<option value="15.00">15.00</option>
+										<option value="16.00">16.00</option>
+										<option value="17.00">17.00</option>
+										<option value="18.00">18.00</option>
+										<option value="19.00">19.00</option>
+										<option value="20.00">20.00</option>
+									</select>
+								</div>
+							</div>
+							<div class="modal__row">
+								<div class="input"> 
+									<input class="name" type="text" name="name" placeholder="Имя" required>
+								</div>
+							</div>
+							<div class="modal__row"> 
+								<div class="input"> 
+									<input class="tel" type="tel" name="tel" placeholder="Телефон" required>
+								</div>
+							</div>
+							<div class="modal__row"> 
+								<p>Мы свяжемся с Вами в самое ближайшее время <br>(с 9:00 до 21:00)</p>
+							</div>
+							<div class="modal__row"> 
+								<button class="btn btn--red" type="submit">Записаться</button>
+							</div>
+							<div class="modal__row"> 
+								<div class="modal__check">
+									<input id="checkbox" type="checkbox" checked required>
+									<label for="checkbox">Я соглашаюсь на обработку персональных данных</label>
+								</div>
+							</div>
+							<div class="modal_close"></div>
+						</form>
+					</div>
+				</div>
+				<!-- /modal-->
 			</div>
 			<footer class="header">
 				<div class="wrapper">
@@ -597,7 +654,7 @@
 						</div>
 						<div class="header__col">
 							<div class="action"><a class="action__link" href="tel:+78123201020">+7(812) 320-10-20</a>
-								<div class="btn btn--red">Записаться</div>
+								<div class="btn btn--red modal-trigger" data-modal="#modal">Записаться</div>
 							</div>
 						</div>
 					</div>
@@ -608,7 +665,9 @@
 		<script src="js/libs/jquery.fancybox.min.js"></script>
 		<script src="js/libs/slick.min.js"></script>
 		<script src="js/libs/jquery.matchHeight-min.js"></script>
-		<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script src="js/libs/jquery.inputmask.min.js"> </script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script src="js/libs/air-datepicker.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

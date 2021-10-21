@@ -6,6 +6,7 @@ block title
 block style-libs
 	link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/air-datepicker.css")
 
 block content
 
@@ -24,7 +25,7 @@ block content
 								li Одномоментная имплантация (за 1 день)
 								li Имплантация по технологии All-on-4
 								li Имплантация по технологии All-on-6
-							.btn.btn--red Записаться на консультацию
+							.btn.btn--red.modal-trigger(data-modal="#modal") Записаться на консультацию
 						.welcome__img 
 							img(src="img/implantat_new.png", alt="")
 
@@ -72,7 +73,7 @@ block content
 							p Качественно проведенная имплантация зубов решит не только физические, но и эстетические проблемы, возвращая красивую улыбку.
 					.row 
 						.description__col
-							.item 
+							.item.modal-trigger(data-modal="#modal")
 								.item__body
 									.item__img
 										img(src="img/nobel_logo_header.png", alt="")
@@ -84,7 +85,7 @@ block content
 									.item__price 36 500 руб.
 									.btn.btn--red Записаться
 						.description__col
-							.item
+							.item.modal-trigger(data-modal="#modal")
 								.item__body 
 									.item__img
 										img(src="img/Logo_osstem.png", alt="")
@@ -96,7 +97,7 @@ block content
 									.item__price 25 900 руб.
 									.btn.btn--red Записаться
 						.description__col
-							.item 
+							.item.modal-trigger(data-modal="#modal")
 								.item__body
 									.item__img
 										img(src="img/logo-neo-biotech.png", alt="")
@@ -113,7 +114,7 @@ block content
 					h2.title Имплантация зубов All-on-4 под ключ
 					.row 
 						.description2__col1 
-							.item 
+							.item.modal-trigger(data-modal="#modal")
 								.item__body
 									.item__img
 										img(src="img/nobel_logo_header.png", alt="")
@@ -143,7 +144,7 @@ block content
 							p Дополнительные титановые стержни обеспечивают максимально надежное закрепление ортопедической конструкции для более правильного распределения нагрузки на импланты. Это не только снижает риск их отторжения, но и увеличивает срок надежной фиксации.
 					.row 
 						.description__col
-							.item 
+							.item.modal-trigger(data-modal="#modal")
 								.item__body
 									.item__img
 										img(src="img/nobel_logo_header.png", alt="")
@@ -158,7 +159,7 @@ block content
 									.item__price 456 600 руб.
 									.btn.btn--red Записаться
 						.description__col
-							.item
+							.item.modal-trigger(data-modal="#modal")
 								.item__body 
 									.item__img
 										img(src="img/Logo_osstem.png", alt="")
@@ -173,7 +174,7 @@ block content
 									.item__price 324 600 руб.
 									.btn.btn--red Записаться
 						.description__col
-							.item 
+							.item.modal-trigger(data-modal="#modal")
 								.item__body
 									.item__img
 										img(src="img/logo-neo-biotech.png", alt="")
@@ -290,7 +291,7 @@ block content
 							span Формирователь десны «Nobel»	
 							span 8 300 ₽
 					.price__btn 
-						.btn.btn--red Записаться на прием
+						.btn.btn--red.modal-trigger(data-modal="#modal") Записаться на прием
 			
 			section.portfolio 
 				.wrapper 
@@ -562,6 +563,47 @@ block content
 						.map__title Наши клиники
 						ul.map__list
 
+			// modal
+			.modal#modal
+				.modal_body
+					form(action="#").modal_content
+						.modal__title Записаться на прием
+						.modal__row
+							p Выберите удобное для Вас дату и время
+						.modal__row.modal__row--half 
+							.input
+								input(type="text" name="date" required autocomplete="off")#datepicker
+							.select 
+								select(name="time") 
+									option(value="9.00") 9.00
+									option(value="10.00") 10.00
+									option(value="11.00") 11.00
+									option(value="12.00") 12.00
+									option(value="13.00") 13.00
+									option(value="14.00") 14.00
+									option(value="15.00") 15.00
+									option(value="16.00") 16.00
+									option(value="17.00") 17.00
+									option(value="18.00") 18.00
+									option(value="19.00") 19.00
+									option(value="20.00") 20.00
+						.modal__row
+							.input 
+								input(type="text" name="name" placeholder="Имя" required).name
+						.modal__row 
+							.input 
+								input(type="tel" name="tel" placeholder="Телефон" required).tel
+						.modal__row 
+							p Мы свяжемся с Вами в самое ближайшее время <br>(с 9:00 до 21:00)
+						.modal__row 
+							button(type="submit").btn.btn--red Записаться
+						.modal__row 
+							.modal__check
+								input#checkbox(type="checkbox" checked required)
+								label(for="checkbox") Я соглашаюсь на обработку персональных данных
+						.modal_close
+			// /modal
+
 		include blocks/footer.pug
 
 block js-libs
@@ -569,4 +611,6 @@ block js-libs
 	script(src="js/libs/jquery.fancybox.min.js")
 	script(src="js/libs/slick.min.js")
 	script(src="js/libs/jquery.matchHeight-min.js")
-	script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	script(src="js/libs/jquery.inputmask.min.js") 
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	script(src="js/libs/air-datepicker.js") 
