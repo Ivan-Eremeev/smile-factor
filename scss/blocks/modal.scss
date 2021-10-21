@@ -102,4 +102,17 @@
 		background-position: right 10px center;
 		font-size: 18px;
 	}
+	@media (max-width: $break_xs) {
+		&_content {
+			padding: 20px 10px;
+		}
+		#datepicker {
+			font-size: 14px;
+		}
+		&__row {
+			p {
+				font-size: 16px;
+			}
+		}
+	}
 }

@@ -212,6 +212,11 @@ b, strong {
       box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
     }
   }
+  @media (max-width: $break_xs) {
+    input {
+      font-size: 18px;
+    }
+  }
 }
 .select {
   select {
@@ -229,6 +234,11 @@ b, strong {
     }
     &:focus-visible {
       outline: none;
+    }
+  }
+  @media (max-width: $break_xs) {
+    select {
+      font-size: 14px;
     }
   }
 }

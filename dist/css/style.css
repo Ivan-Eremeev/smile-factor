@@ -407,6 +407,11 @@ b, strong {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+@media (max-width: 500px) {
+  .input input {
+    font-size: 18px;
+  }
+}
 
 .select select {
   width: 100%;
@@ -427,6 +432,11 @@ b, strong {
 }
 .select select:focus-visible {
   outline: none;
+}
+@media (max-width: 500px) {
+  .select select {
+    font-size: 14px;
+  }
 }
 
 /* /settings */
@@ -1629,4 +1639,15 @@ b, strong {
   background-repeat: no-repeat;
   background-position: right 10px center;
   font-size: 18px;
+}
+@media (max-width: 500px) {
+  .modal_content {
+    padding: 20px 10px;
+  }
+  .modal #datepicker {
+    font-size: 14px;
+  }
+  .modal__row p {
+    font-size: 16px;
+  }
 }
