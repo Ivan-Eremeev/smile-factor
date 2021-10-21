@@ -1343,12 +1343,27 @@ b, strong {
   margin-bottom: 10px;
 }
 .review__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  padding: 0 10px;
+  padding: 1px 10px;
   background-color: #D84452;
   font-size: 14px;
   color: #fff;
+}
+.review__date:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../img/calendar.png);
+  background-size: contain;
 }
 @media (max-width: 769px) {
   .review__slider {
@@ -1370,6 +1385,81 @@ b, strong {
   }
 }
 
+.map {
+  padding: 30px 0;
+  position: relative;
+}
+.map__map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 .map #yandexMap {
-  height: 420px;
+  height: 100%;
+}
+.map__nav {
+  display: inline-block;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #40E0BB;
+  position: relative;
+  z-index: 2;
+}
+.map__title {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.map__list li {
+  margin-bottom: 5px;
+}
+.map__list a {
+  border-bottom: 1px solid #000;
+}
+.map__list a:hover {
+  color: #40E0BB;
+  border-color: #40E0BB;
+}
+.map__list a.active {
+  font-style: italic;
+  border-bottom: none;
+}
+@media (max-width: 1050px) {
+  .map__title {
+    font-size: 22px;
+  }
+  .map__nav {
+    padding: 20px;
+  }
+  .map__list {
+    font-size: 18px;
+  }
+}
+@media (max-width: 769px) {
+  .map__map {
+    height: 300px;
+    position: static;
+    border: 1px solid #40E0BB;
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+    overflow: hidden;
+  }
+  .map__nav {
+    display: block;
+    border-radius: 0 0 20px 20px;
+    border-top: none;
+  }
+}
+@media (max-width: 500px) {
+  .map__title {
+    font-size: 20px;
+  }
+  .map__nav {
+    text-align: center;
+  }
 }

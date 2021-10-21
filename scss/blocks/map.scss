@@ -1,5 +1,81 @@
 .map {
-  #yandexMap {
-    height: 420px;
+  padding: 30px 0;
+  position: relative;
+  &__map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
+  #yandexMap {
+    height: 100%;
+  }
+  &__nav {
+    display: inline-block;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid $green;
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__list {
+    li {
+      margin-bottom: 5px;
+    }
+    a {
+      border-bottom: 1px solid #000;
+      &:hover {
+        color: $green;
+        border-color: $green;
+      }
+      &.active {
+        font-style: italic;
+        border-bottom: none;
+      }
+    }
+  }
+   @media (max-width: $break_md) {
+    &__title {
+      font-size: 22px;
+    }
+    &__nav {
+      padding: 20px;
+    }
+    &__list {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__map {
+      height: 300px;
+      position: static;
+      border: 1px solid $green;
+      border-radius: 20px 20px 0 0;
+      border-bottom: none;
+      overflow: hidden;
+    }
+    &__nav {
+      display: block;
+      border-radius: 0 0 20px 20px;
+      border-top: none;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 20px;
+    }
+    &__nav {
+      text-align: center;
+    }
+  }
+
 }

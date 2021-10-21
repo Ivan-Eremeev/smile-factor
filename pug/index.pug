@@ -306,10 +306,10 @@ block content
 						#sliderPortfolio
 							.portfolio__item 
 								.portfolio__images
-									.portfolio__img 
+									a(href="img/implant-1.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-1.jpg", alt="")
 										.portfolio__sticker До
-									.portfolio__img 
+									a(href="img/implant-1-1.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-1-1.jpg", alt="")
 										.portfolio__sticker После
 								.portfolio__text 
@@ -320,10 +320,10 @@ block content
 										a(href="https://factorsmile.ru/specialisty/idrisov-nimatula-shamilevich" target="_blank") Идрисов Ниматула Шамильевич
 							.portfolio__item 
 								.portfolio__images
-									.portfolio__img 
+									a(href="img/implant-2.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-2.jpg", alt="")
 										.portfolio__sticker До
-									.portfolio__img 
+									a(href="img/implant-2-1.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-2-1.jpg", alt="")
 										.portfolio__sticker После
 								.portfolio__text 
@@ -332,10 +332,10 @@ block content
 										a(href="https://factorsmile.ru/specialisty/idrisov-nimatula-shamilevich" target="_blank") Идрисов Ниматула Шамильевич
 							.portfolio__item 
 								.portfolio__images
-									.portfolio__img 
+									a(href="img/implant-3.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-3.jpg", alt="")
 										.portfolio__sticker До
-									.portfolio__img 
+									a(href="img/implant-3-1.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-3-1.jpg", alt="")
 										.portfolio__sticker После
 								.portfolio__text 
@@ -347,10 +347,10 @@ block content
 										a(href="https://factorsmile.ru/specialisty/zhuravkov-sergej-aleksandrovich" target="_blank") Журавков Сергей Александрович
 							.portfolio__item 
 								.portfolio__images
-									.portfolio__img 
+									a(href="img/implant-4.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-4.jpg", alt="")
 										.portfolio__sticker До
-									.portfolio__img 
+									a(href="img/implant-4-1.jpg" data-fancybox).portfolio__img 
 										img(src="img/implant-4-1.jpg", alt="")
 										.portfolio__sticker После
 								.portfolio__text 
@@ -562,11 +562,12 @@ block content
 									.review__date Опубликовано в мае 2021г.
 
 			.map 
-				.map__map
-					#yandexMap
-					.wrappeer
-						.map__nav
-							ul.map__list
+				.wrapper
+					.map__map
+						#yandexMap
+					.map__nav
+						.map__title Наши клиники
+						ul.map__list
 
 		include blocks/footer.pug
 
