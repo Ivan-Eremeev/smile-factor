@@ -142,7 +142,10 @@
 .action {
   &__link {
     display: block;
-    font-size: 24px;
+    font-size: 18px;
+    letter-spacing: 0.03rem;
+    font-weight: 500;
+    text-decoration: underline;
     margin-bottom: 2px;
     &:hover {
       color: $red;
@@ -150,9 +153,7 @@
   }
   .btn {
     display: flex;
-    padding: 0 20px 4px;
-    border-radius: 15px;
-    font-size: 22px;
+    padding: 1px 20px 3px;
   }
   @media (max-width: $break_xs) {
     &__link {
@@ -162,4 +163,8 @@
       font-size: 18px;
     }
   }
+}
+
+.footer {
+  padding: 20px 0;
 }

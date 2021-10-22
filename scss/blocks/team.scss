@@ -29,6 +29,7 @@
     padding: 10px;
     border: 1px solid $green;
     box-shadow: $shadow;
+    line-height: 1.2;
   }
   &__img {
     img {
@@ -44,6 +45,7 @@
   &__name {
     font-style: italic;
     text-align: center;
+    margin-bottom: 5px;
   }
   &__text {
     text-align: center;
