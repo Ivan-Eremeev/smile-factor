@@ -1519,7 +1519,7 @@ b, strong {
 }
 @media (max-width: 769px) {
   .map__map {
-    height: 300px;
+    height: 400px;
     position: static;
     border: 1px solid #40E0BB;
     border-radius: 20px 20px 0 0;
