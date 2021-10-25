@@ -13,12 +13,12 @@
     align-items: center;
     width: 125px;
     height: 125px;
-    padding: 20px;
+    // padding: 20px;
     border-radius: 100%;
-    border: 2px solid $green;
+    // border: 2px solid $green;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+    // box-shadow: 5px 5px 10px rgba(0,0,0,.2);
     margin-bottom: 12px;
   }
   &__text {
@@ -28,7 +28,7 @@
     &__icon {
       width: 80px;
       height: 80px;
-      padding: 15px;
+      // padding: 15px;
     }
   }
   @media (max-width: $break_sm) {

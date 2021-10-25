@@ -748,13 +748,9 @@ strong {
   align-items: center;
   width: 125px;
   height: 125px;
-  padding: 20px;
   border-radius: 100%;
-  border: 2px solid #40E0BB;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 12px;
 }
 
@@ -1584,7 +1580,6 @@ strong {
   .advantages__icon {
     width: 80px;
     height: 80px;
-    padding: 15px;
   }
 
   .advantages {
