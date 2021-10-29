@@ -185,7 +185,7 @@ $(document).ready(function () {
 	  };
 	  function createMenu(item) {
 	    // Пункт меню.
-	    var itemMenu = $('<li><a href="#">' + item.name + '</a></li>'),
+	    var itemMenu = $('<li><span class="map__metro">м</span><a href="#">' + item.name + '</a></li>'),
 	      // Создаем метку.
 	      placemark = new ymaps.Placemark(item.center, { balloonContent: item.name });
 	    // Добавляем метку в коллекцию.

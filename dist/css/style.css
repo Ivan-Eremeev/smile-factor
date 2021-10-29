@@ -556,8 +556,12 @@ strong {
   transition: 0.3s;
 }
 
-.location__trigger > a:hover b {
+.location__trigger:hover {
   color: #ED2B58;
+}
+
+.location__trigger:hover svg {
+  fill: #ED2B58;
 }
 
 .location__click {
@@ -578,11 +582,8 @@ strong {
   transition: 0.3s;
 }
 
-.location__click:hover svg {
-  fill: #ED2B58;
-}
-
 .location__drop {
+  min-width: 300px;
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -619,10 +620,6 @@ strong {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-}
-
-.location__item:hover b {
-  color: #ED2B58;
 }
 
 .location--footer .location__drop {
@@ -1302,6 +1299,25 @@ strong {
   margin-bottom: 5px;
 }
 
+.map__list li:nth-child(1) .map__metro,
+.map__list li:nth-child(3) .map__metro,
+.map__list li:nth-child(6) .map__metro {
+  background-color: #0000FF;
+}
+
+.map__list li:nth-child(2) .map__metro {
+  background-color: #FFA500;
+}
+
+.map__list li:nth-child(5) .map__metro {
+  background-color: #FF0000;
+}
+
+.map__list li:nth-child(4) .map__metro,
+.map__list li:nth-child(7) .map__metro {
+  background-color: #800080;
+}
+
 .map__list a {
   border-bottom: 1px solid #000;
 }
@@ -1314,6 +1330,25 @@ strong {
 .map__list a.active {
   font-style: italic;
   border-bottom: none;
+}
+
+.map__metro {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+  border-radius: 100%;
+  font-size: 14px;
+  color: #fff;
 }
 
 .modal {
@@ -1540,6 +1575,11 @@ strong {
   .slider-arrow svg {
     width: 15px;
     height: 15px;
+  }
+
+  .location__drop {
+    left: auto;
+    right: 0;
   }
 
   .welcome__row {
@@ -1794,7 +1834,17 @@ strong {
   }
 
   .location__drop {
-    left: 0;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translate(-50%, 20px);
+    -ms-transform: translate(-50%, 20px);
+    transform: translate(-50%, 20px);
+  }
+
+  .location__drop.open {
+    -webkit-transform: translate(-50%, 10px);
+    -ms-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
   }
 
   .worktime {

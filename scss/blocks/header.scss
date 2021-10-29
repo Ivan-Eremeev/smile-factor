@@ -51,11 +51,10 @@
     b {
       transition: 0.3s;
     }
-    > a {
-      &:hover {
-        b {
-          color: $red;
-        }
+    &:hover {
+      color: $red;
+      svg {
+        fill: $red;
       }
     }
   }
@@ -70,13 +69,9 @@
       fill: #000;
       transition: 0.3s;
     }
-    &:hover {
-      svg {
-        fill: $red;
-      }
-    }
   }
   &__drop {
+    min-width: 300px;
     padding: 20px;
     border-radius: 10px;
     background-color: #fff;
@@ -101,15 +96,16 @@
     b {
       transition: 0.3s;
     }
-    &:hover {
-      b {
-        color: $red;
-      }
-    }
   }
   &--footer {
     .location__drop {
       bottom: 120%;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__drop {
+      left: auto;
+      right: 0;
     }
   }
   @media (max-width: $break_xs) {
@@ -123,7 +119,12 @@
       }
     }
     &__drop {
-      left: 0;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%,20px);
+      &.open {
+        transform: translate(-50%,10px);
+      }
     }
   }
 }

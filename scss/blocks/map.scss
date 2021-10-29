@@ -30,6 +30,26 @@
   &__list {
     li {
       margin-bottom: 5px;
+      &:nth-child(1), &:nth-child(3), &:nth-child(6) {
+        .map__metro {
+          background-color: #0000FF;
+        }
+      }
+      &:nth-child(2) {
+        .map__metro {
+          background-color: #FFA500;
+        }
+      }
+      &:nth-child(5) {
+        .map__metro {
+          background-color: #FF0000;
+        }
+      }
+      &:nth-child(4), &:nth-child(7) {
+        .map__metro {
+          background-color: #800080;
+        }
+      }
     }
     a {
       border-bottom: 1px solid #000;
@@ -42,6 +62,18 @@
         border-bottom: none;
       }
     }
+  }
+  &__metro {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding-bottom: 3px;
+    margin-right: 5px;
+    border-radius: 100%;
+    font-size: 14px;
+    color: #fff;
   }
    @media (max-width: $break_md) {
     &__title {
